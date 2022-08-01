@@ -1,6 +1,4 @@
-import java.io.PrintStream;
 import java.time.LocalDate;
-import java.util.Arrays;
 
 public class Main {
     public static void calculationYear( int year){
@@ -24,17 +22,18 @@ public class Main {
             System.out.println("Установите lite - версию Android");
         }
     }
-    public static void deliveriCard (int deliveriDistance){
+    public static int deliveriCard (int deliveriDistance){
         if (deliveriDistance < 19){
-            System.out.println("Доставка 1 день");
+            return (1);
         }
         if (deliveriDistance >= 20 && deliveriDistance <= 60){
-            System.out.println("Доставка 2 дня");
+            return (2);
         }
         if (deliveriDistance >= 61 && deliveriDistance <= 100){
-            System.out.println("Доставка 3 дня");
+            return (3);
 
         }
+        return deliveriDistance;
     }
 
     public static void main(String[] args) {
@@ -44,10 +43,8 @@ public class Main {
         int clientOS = 1;
         detectionSoftVersion(clientOS);
 
-        int deliveryDistance = 52;
-        deliveriCard(deliveryDistance);
-
-
+        int deliveryDistance = 10;
+        System.out.println(deliveriCard(deliveryDistance) + " день(я) примерный срок доставка карты!");
 
 
 
