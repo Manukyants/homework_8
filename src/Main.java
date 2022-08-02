@@ -13,12 +13,14 @@ public class Main {
         int currentYear = LocalDate.now().getYear();
         if (clientOS == 0 && currentYear >= 2015){
             System.out.println("Установите обычную версию iOS");
-        }else if (clientOS == 0 && currentYear < 2015){
+        }
+        if (clientOS == 0 && currentYear < 2015){
             System.out.println("Установите lite - версию iOS");
         }
         if (clientOS == 1 && currentYear >= 2015) {
             System.out.println("Установите обычную версию Android");
-        }else if (clientOS == 1 && currentYear < 2015){
+        }
+        if (clientOS == 1 && currentYear < 2015){
             System.out.println("Установите lite - версию Android");
         }
     }
@@ -45,8 +47,5 @@ public class Main {
 
         int deliveryDistance = 10;
         System.out.println(deliveriCard(deliveryDistance) + " день(я) примерный срок доставка карты!");
-
-
-
     }
 }
